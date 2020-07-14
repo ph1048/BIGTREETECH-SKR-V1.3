@@ -112,7 +112,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//#define SERIAL_PORT_2 -1
+//#define SERIAL_PORT_2 0
 
 /**
  * This setting determines the communication speed of the printer.
@@ -1735,7 +1735,7 @@
 //
 // Note: Usually sold with a white PCB.
 //
-#define REPRAP_DISCOUNT_SMART_CONTROLLER
+//#define REPRAP_DISCOUNT_SMART_CONTROLLER
 
 //
 // Original RADDS LCD Display+Encoder+SDCardReader
@@ -2040,10 +2040,17 @@
 //#define TOUCH_UI_FTDI_EVE
 
 //
+// Anycubic DWIN TFT Display
+//
+#define DWIN_TFT
+#define DWIN_TFT_DEBUG
+#define DWIN_SERIAL_PORT 0
+
+//
 // Third-party or vendor-customized controller interfaces.
 // Sources should be installed in 'src/lcd/extensible_ui'.
 //
-//#define EXTENSIBLE_UI
+#define EXTENSIBLE_UI
 
 //=============================================================================
 //=============================== Graphical TFTs ==============================

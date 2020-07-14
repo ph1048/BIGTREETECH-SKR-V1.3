@@ -99,6 +99,26 @@ extern "C" volatile uint32_t _millis;
   #define NUM_SERIAL 1
 #endif
 
+#ifdef DWIN_SERIAL_PORT
+  #if DWIN_SERIAL_PORT == SERIAL_PORT
+    #error "DWIN_SERIAL_PORT must be different than SERIAL_PORT. Please update your configuration."
+  #elif defined(SERIAL_PORT_2) && DWIN_SERIAL_PORT == SERIAL_PORT_2
+    #error "DWIN_SERIAL_PORT must be different than SERIAL_PORT_2. Please update your configuration."
+  #elif DWIN_SERIAL_PORT == -1
+    #define DWIN_SERIAL UsbSerial
+  #elif DWIN_SERIAL_PORT == 0
+    #define DWIN_SERIAL MSerial
+  #elif DWIN_SERIAL_PORT == 1
+    #define DWIN_SERIAL MSerial1
+  #elif DWIN_SERIAL_PORT == 2
+    #define DWIN_SERIAL MSerial2
+  #elif DWIN_SERIAL_PORT == 3
+    #define DWIN_SERIAL MSerial3
+  #else
+    #error "DWIN_SERIAL_PORT must be from -1 to 3. Please update your configuration."
+  #endif
+#endif
+
 //
 // Interrupts
 //
