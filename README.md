@@ -1,3 +1,6 @@
+# About
+This firmware is customized for using skr 1.4 turbo with Anycubic 4max pro's TFT DWIN Display. I am not author of the code, the code is taken from here: https://github.com/Poket-Jony/Marlin-A4MaxPro-2.0.x
+
 # BIGTREETECH-SKR-V1.3
 32bit board with LPC1768, support marlin2.0 and smoothieware, support lcd2004/12864, On-board TMC2130 SPI interface and TMC2208 UART interface no additional wiring is 
 
